@@ -1,5 +1,5 @@
 gs = () => {
-    document.body.innerHTML += '<style>*{font-family:sans-serif;}a,body{color:#fff;background:#111;text-align:center;margin:0;}#c{display:block;width:100%;image-rendering:optimizeSpeed;image-rendering:pixelated;max-height:100vh;object-fit:contain;}#g{position:relative;margin:0 0 32px 0;font-weight:bold;}#ts{position:absolute;bottom:2em;left:0;right:0;font-size:1.2vw;}#msg{position:absolute;top:8vw;left:0;right:0;font-size:1.2vw;display:none;}#a,#h{position:absolute;bottom:3%;left:20%;right:0;font-size:3.2vw;}#h{left:-20%;}h1{font-size:16vw;margin:0;}</style><div id="g"><canvas id=c width=320 height=180></canvas><div id="ts"><h1>Q1K3</h1>CLICK TO START</div><div id="h"></div><div id="a"></div><div id="msg"></div></div><p>MOUSE SPEED: <input id="m" type="range" value=10 min=1 max=50> INVERT: <input type="checkbox" id="mi"></p><p><input id="f" type="button" value="FULLSCREEN"></p><p>code: <a href="https://phoboslab.org">phoboslab.org</a> / music: <a href="http://no-fate.net">no-fate.net</a></p>';
+    document.getElementById("q13").innerHTML += '<style>*{font-family:sans-serif;}a,body{color:#fff;background:#111;text-align:center;margin:0;}#c{display:block;width:100%;image-rendering:optimizeSpeed;image-rendering:pixelated;max-height:100vh;object-fit:contain;}#g{position:relative;margin:0 0 32px 0;font-weight:bold;}#ts{position:absolute;bottom:2em;left:0;right:0;font-size:1.2vw;}#msg{position:absolute;top:8vw;left:0;right:0;font-size:1.2vw;display:none;}#a,#h{position:absolute;bottom:3%;left:20%;right:0;font-size:3.2vw;}#h{left:-20%;}h1{font-size:16vw;margin:0;}</style><div id="g"><canvas id=c width=320 height=180></canvas><div id="ts"><h1>Q1K3</h1>CLICK TO START</div><div id="h"></div><div id="a"></div><div id="msg"></div></div><p>MOUSE SPEED: <input id="m" type="range" value=10 min=1 max=50> INVERT: <input type="checkbox" id="mi"></p><p><input id="f" type="button" value="FULLSCREEN"></p><p>code: <a href="https://phoboslab.org">phoboslab.org</a> / music: <a href="http://no-fate.net">no-fate.net</a></p>';
     let t = [ [ 64, 64, 0, 2, 3, 1.4, 2, 17176, 1.3 ], [ 64, 64, 38751, 1, 18, 4, 2, 2, 27, 9, 65530, 0, 7, 1, -1, 9, 13, 5, 52, 8, 8, 65528, 39039, 4, 0, 0, 0, 64, 512, 15, 4, 0, 0, 0, 64, 64, 14 ], [ 64, 64, 38751, 1, 18, 4, 2, 2, 27, 9, 65530, 0, 7, 1, -1, 0, 13, 64, 52, 64, 8, 65531, 39039, 4, 0, 0, 0, 64, 512, 15, 4, 0, 0, 0, 64, 64, 14 ], [ 64, 64, 13119, 4, 1, 0, 0, 64, 64, 15, 0, 24, 11, 17, 50, 65523, 2, 8 ], [ 32, 32, 21839, 1, 0, 2, 10, 2, 11, 4, 65528, 10, 25931, 4, 0, 0, 0, 32, 32, 14 ], [ 32, 32, 17487, 0, 1, 1, 30, 30, 65528, 11, 21580, 4, 0, 0, 0, 32, 32, 15 ], [ 32, 32, 30015, 4, 5, 0, 0, 32, 32, 15, 1, 5, 4, 2, 2, 22, 6, 65522, 0, 8 ], [ 32, 32, 8751, 1, 1, 1, 8, 4, 11, 5, 65524, 15, 17487, 4, 0, 0, 0, 64, 64, 15 ], [ 32, 32, 13119, 4, 4, 0, 0, 32, 32, 15, 1, 10, 3, 11, 6, 25, 10, 64536, 64568, 65519 ], [ 32, 32, 8751, 1, 1, 1, 3, 3, 4, 4, 65524, 14, 21565, 1, 1, -1, 15, 1, 16, 16, 65522, 7, 0, 1, -1, 0, 1, 15, 16, 6, 65521, 0, 4, 4, 0, 0, 0, 32, 32, 15 ], [ 32, 32, 8719, 2, 63506, 1, 4, 0, 0, 0, 32, 32, 12 ], [ 32, 32, 21295, 4, 10, 0, -4, 32, 298, 10, 2, 4372, 1 ], [ 32, 32, 8463, 1, -1, 1, 35, 1, 35, 4, 65522, 10, 34399, 0, -1, 6, 34, 6, 65526, 2, 34399, 2, 29479, 1, 4, 6, 0, 0, 32, 32, 5 ], [ 32, 32, 5535, 4, 0, 0, 0, 128, 64, 14 ], [ 32, 32, 8463, 1, 0, 0, 3, 3, 4, 4, 0, 10, 65521, 0, 4, 4, 23, 23, 10, 64885, 21551, 3, 4, 16, 13, 0, 11, "::][::", 4, 0, 4, 4, 26, 26, 15 ], [ 32, 32, 8751, 1, 1, 1, 8, 3, 11, 5, 65524, 15, 17487, 0, 9, 6, 14, 13, 15, 65525, 4383, 4, 0, 0, 0, 64, 64, 12, 3, 10, 11, 20267, 0, 8, "---" ], [ 32, 32, 17487, 4, 5, 0, 0, 32, 32, 15, 1, 4, 4, 3, 3, 22, 22, 65523, 7, 30587 ], [ 64, 64, 38767, 2, 36875, 2.5, 1, 4, 10, 15, 8, 39, 59, 15, 15, 8463, 1, 3, 30, 14, 5, 15, 6, 12813, 4367, 38671, 0, 20, 1, 22, 6, 13119, 10, 38671, 4, 0, 0, 0, 64, 64, 11 ], [ 32, 32, 40975, 2, 63308, 1.5, 2, 63751, 7.3 ], [ 64, 64, 13119, 4, 17, 0, 0, 64, 64, 15, 0, 0, 29, 64, 64, 0, 0, 89, 4, 4, 21, -6, 22, 24, 15 ], [ 32, 32, 13119, 4, 9, 0, 0, 32, 32, 15, 4, 8, 6, -22, 21, 32, 15, 4, 18, 0, 0, 32, 32, 4 ], [ 64, 64, 13119, 0, 0, 0, 64, 64, 0, 0, 64271, 3, -1, 50, 33795, 0, 32, "XXX", 4, 7, 0, 0, 64, 64, 6 ], [ 64, 64, 34063, 4, 7, 0, 0, 64, 64, 12, 2, 12554, 1 ], [ 32, 32, 65535, 4, 12, 0, 0, 32, 32, 9, 3, 6, 30, 61455, 0, 25, "+" ], [ 32, 32, 5903, 4, 12, 0, 0, 32, 32, 9, 3, 5, 14, 65529, 0, 12, "NIИ" ], [ 32, 32, 64271, 0, 12, 1, 7, 30, 65528, 8, 63247, 4, 7, 0, 0, 32, 32, 8 ], [ 32, 32, 13119, 1, 1, 1, 14, 14, 16, 32, 56328, 15, 26399, 1, -7, 17, 14, 14, 16, 32, 56328, 8, 26159, 2, 29706, 1, 4, 0, 0, 0, 32, 320, 14 ], [ 32, 32, 33567, 1, 1, 1, 6, 30, 16, 31, 65526, 15, 33823, 1, 9, -14, 6, 30, 16, 32, 65526, 15, 29743, 2, 55625, 1.5, 4, 0, 0, 0, 32, 320, 15 ], [ 32, 32, 12559, 1, 1, 1, 14, 14, 16, 16, 65525, 7, 21295, 0, 1, 1, 14, 14, 65525, 0, 34399, 0, 17, 17, 14, 14, 65524, 0, 34399, 2, 8, 1.5 ], [ 32, 32, 9503, 4, 11, 0, 0, 32, 32, 12, 1, 1, 1, 6, 7, 6, 8, 65521, 0, 4 ], [ 32, 32, 15, 4, 18, 0, 16, 32, 32, 15, 4, 27, 0, -16, 32, 32, 10 ] ], i = [ 6014, 21, 88, [ [ [ 7, 0, 0, 1, 255, 0, 7, 0, 0, 1, 255, 0, 0, 100, 0, 3636, 254, 2, 1199, 254, 4, 71, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 ], [ [ 126, 126, 0, 0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 126, 126, 0, 0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 6, 0, 0, 0, 255, 2, 6, 0, 18, 0, 255, 2, 0, 1e5, 56363, 1e5, 199, 2, 200, 254, 8, 24, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 2, 2, 3, 4, 2, 2, 3, 5, 2, 2, 3, 4, 2, 2, 3, 5 ], [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 7, 0, 0, 0, 87, 2, 8, 0, 0, 0, 16, 3, 8, 0, 22, 2193, 255, 3, 1162, 51, 10, 182, 2, 190, 0, 1, 10, 96, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 ], [ [ 149, 149, 0, 0, 149, 0, 149, 0, 149, 149, 0, 0, 149, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 8, 0, 0, 0, 65, 2, 6, 0, 0, 0, 243, 3, 0, 200, 7505, 2e4, 204, 4, 6180, 81, 4, 198, 0, 0, 0, 0, 6, 131, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 1, 1, 2, 3 ], [ [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 125, 0, 0, 0, 0, 0, 0, 0, 125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ] ] ], n, V = 44100, W = 4096, Z = W - 1, $ = new Float32Array(4 * W), e = (t, i = 1, s = 0, h = 0) => {
         let e = n.createGain(), a = n.createBufferSource(), r = n.createStereoPanner();
         e.gain.value = i, e.connect(n.destination), r.connect(e), r.pan.value = h, a.buffer = t, 
@@ -7,11 +7,11 @@ gs = () => {
     }, _ = (t, i) => {
         let s = n.createBuffer(2, t.length, V);
         return s.getChannelData(0).set(t), s.getChannelData(1).set(i), s;
-    }, p = (t, i, n, l, o, s, h, e, c, d, a, r, _, p, f, u, v, m, M, g, x, y, w, k, b, A, F, E, T, z, U, D, q, C) => {
-        let N = C * W, O = a * W, S = v * W, Y = Math.pow(2, E - 8) / t, I = Math.pow(2, D - 8) / t, K = 0, j = 0, H = b / 255, L = 0, R = 0, P, X = (n.length, 
+    }, p = (t, i, n, l, o, s, h, e, c, d, a, r, _, p, f, u, v, m, M, g, x, y, w, k, b, A, F, E, T, z, U, q, D, C) => {
+        let N = C * W, O = a * W, S = v * W, Y = Math.pow(2, E - 8) / t, I = Math.pow(2, q - 8) / t, K = 0, j = 0, H = b / 255, L = 0, R = 0, P, X = (n.length, 
         M + g + x - 1), G = .00390625 * Math.pow(1.059463094, i + 12 * (s - 8) + h - 128) * (1 + 8e-4 * e), Q = .00390625 * Math.pow(1.059463094, i + 12 * (r - 8) + _ - 128) * (1 + 8e-4 * p);
         for (let r = X; 0 <= r; --r) {
-            let t = r + o, i = $[N + (t * I * W & Z)] * q / 512 + .5, s = 0, h = k, e, a = 1;
+            let t = r + o, i = $[N + (t * I * W & Z)] * D / 512 + .5, s = 0, h = k, e, a = 1;
             r < M ? a = r / M : r >= M + g && (a -= (r - M - g) / x), e = G, z && (e *= i), 
             c && (e *= a * a), K += e, s += $[O + (K * W & Z)] * d, e = Q, f && (e *= a * a), 
             j += e, s += $[S + (j * W & Z)] * u, m && (s += (2 * Math.random() - 1) * m * a), 
@@ -76,7 +76,7 @@ gs = () => {
         x: t,
         y: i,
         z: s
-    }), A = (t, i, s) => F(((t, i) => b(t.x, t.y * Math.cos(i) - t.z * Math.sin(i), t.y * Math.sin(i) + t.z * Math.cos(i)))(t, s), i), F = (t, i) => b(t.z * Math.sin(i) + t.x * Math.cos(i), t.y, t.z * Math.cos(i) - t.x * Math.sin(i)), E = (t, i) => Math.atan2(i.x - t.x, i.z - t.z), T = t => b(t.x, t.y, t.z), z = t => Math.hypot(t.x, t.y, t.z), U = (t, i) => z(q(t, i)), D = (t, i) => b(t.x + i.x, t.y + i.y, t.z + i.z), q = (t, i) => b(t.x - i.x, t.y - i.y, t.z - i.z), C = (t, i) => b(t.x * i, t.y * i, t.z * i), N = t => C(t, 1 / z(t)), O = (t, i, s) => N(((t, i) => b(t.y * i.z - t.z * i.y, t.z * i.x - t.x * i.z, t.x * i.y - t.y * i.x))(q(t, i), q(s, i))), S = {
+    }), A = (t, i, s) => F(((t, i) => b(t.x, t.y * Math.cos(i) - t.z * Math.sin(i), t.y * Math.sin(i) + t.z * Math.cos(i)))(t, s), i), F = (t, i) => b(t.z * Math.sin(i) + t.x * Math.cos(i), t.y, t.z * Math.cos(i) - t.x * Math.sin(i)), E = (t, i) => Math.atan2(i.x - t.x, i.z - t.z), T = t => b(t.x, t.y, t.z), z = t => Math.hypot(t.x, t.y, t.z), U = (t, i) => z(D(t, i)), q = (t, i) => b(t.x + i.x, t.y + i.y, t.z + i.z), D = (t, i) => b(t.x - i.x, t.y - i.y, t.z - i.z), C = (t, i) => b(t.x * i, t.y * i, t.z * i), N = t => C(t, 1 / z(t)), O = (t, i, s) => N(((t, i) => b(t.y * i.z - t.z * i.y, t.z * i.x - t.x * i.z, t.x * i.y - t.y * i.x))(D(t, i), D(s, i))), S = {
         antialias: !1
     }, Y = c.getContext("webgl", S) || c.getContext("experimental-webgl", S), I = "precision highp float;varying vec3 vp,vn;varying vec2 vt;attribute vec3 p,n,p2,n2;attribute vec2 t;uniform vec4 c;uniform vec3 mp;uniform vec2 mr;uniform vec2 m;uniform float f;mat4 rx(float r){return mat4(1,0,0,0,0,cos(r),sin(r),0,0,-sin(r),cos(r),0,0,0,0,1);}mat4 ry(float r){return mat4(cos(r),0,-sin(r),0,0,1,0,0,sin(r),0,cos(r),0,0,0,0,1);}mat4 rz(float r){return mat4(cos(r),sin(r),0,0,-sin(r),cos(r),0,0,0,0,1,0,0,0,0,1);}void main(void){mat4 mry=ry(mr.x),mrz=rz(mr.y);vp=(mry*mrz*vec4(mix(p,p2,f),1.)).xyz+mp;vn=(mry*mrz*vec4(mix(n,n2,f),1.)).xyz;vt=t;gl_Position=mat4(1,0,0,0,0,c.w,0,0,0,0,1,1,0,0,-2,0)*rx(-m.y)*ry(-m.x)*vec4(vp-c.xyz,1.);}", K = "precision highp float;varying vec3 vp,vn;varying vec2 vt;uniform sampler2D s;uniform vec3 l[64];void main(void){gl_FragColor=texture2D(s,vt);vec3 vl;for(int i=0;i<64;i+=2) {vl+=max(dot(vn, normalize(l[i]-vp)),0.)*(1./pow(length(l[i]-vp),2.))*l[i+1];}gl_FragColor.rgb=floor(gl_FragColor.rgb*pow(vl,vec3(0.75))*16.0+0.5)/16.0;}", j = new Float32Array(524288), H = 0, L = new Float32Array(192), R = 0, P, X, G, Q, B, J, t0, i0, s0 = [], h0 = b(0, 0, -50), e0 = .2, a0 = 0, r0 = [], n0 = (t, i) => {
         t = Y.crS(t);
@@ -145,8 +145,8 @@ gs = () => {
             nv: 3 * l
         };
     }, M0, g0 = 128, x0 = (t, i, s) => M0.cm[s * g0 * g0 + i * g0 + t >> 3] & 1 << (7 & t), y0 = (i, t) => {
-        var t = q(t, i), s = C(N(t), 16), h = z(t) / 16;
-        for (let t = 0; t < h; t++) if (i = D(i, s), x0(i.x >> 5, i.y >> 4, i.z >> 5)) return i;
+        var t = D(t, i), s = C(N(t), 16), h = z(t) / 16;
+        for (let t = 0; t < h; t++) if (i = q(i, s), x0(i.x >> 5, i.y >> 4, i.z >> 5)) return i;
         return null;
     }, w0 = () => {
         var t, i = b();
@@ -167,12 +167,12 @@ gs = () => {
             if (this._ && this._ < tt) this.L(); else {
                 this.a.y = -1200 * this.g;
                 var t, i = Math.min(this.f * J0, 1);
-                this.v = D(this.v, q(C(this.a, J0), (t = this.v, i = b(i, 0, i), b(t.x * i.x, t.y * i.y, t.z * i.z)))), 
+                this.v = q(this.v, D(C(this.a, J0), (t = this.v, i = b(i, 0, i), b(t.x * i.x, t.y * i.y, t.z * i.z)))), 
                 this.R = [ [], at, et ][this.N];
                 var s, h = this.m, i = C(this.v, J0), e = Math.ceil(z(i) / 16), a = C(i, 1 / e);
                 for (let i = 0; i < e; i++) {
                     let t = T(this.p);
-                    this.p = D(this.p, a), this.P(b(this.p.x, t.y, t.z)) && (!this.m || !this.q || 0 < this.v.y || this.P(b(this.p.x, t.y + this.m, t.z)) ? (this.X(0), 
+                    this.p = q(this.p, a), this.P(b(this.p.x, t.y, t.z)) && (!this.m || !this.q || 0 < this.v.y || this.P(b(this.p.x, t.y + this.m, t.z)) ? (this.X(0), 
                     this.p.x = t.x, this.v.x = -this.v.x * this.M) : (t.y += this.m, this.O = tt), i = e), 
                     this.P(b(this.p.x, t.y, this.p.z)) && (!this.m || !this.q || 0 < this.v.y || this.P(b(this.p.x, t.y + this.m, this.p.z)) ? (this.X(2), 
                     this.p.z = t.z, this.v.z = -this.v.z * this.M) : (t.y += this.m, this.O = tt), i = e), 
@@ -188,7 +188,7 @@ gs = () => {
                 return !(!this.q || !this.C || x0(t.x >> 5, t.y - this.s.y - 8 >> 4, t.z >> 5) || x0(t.x >> 5, t.y - this.s.y - 24 >> 4, t.z >> 5)) || ((h, e) => {
                     for (let s = h.z >> 5; s <= e.z >> 5; s++) for (let i = h.y >> 4; i <= e.y >> 4; i++) for (let t = h.x >> 5; t <= e.x >> 5; t++) if (x0(t, i, s)) return !0;
                     return !1;
-                })(q(t, this.s), D(t, this.s));
+                })(D(t, this.s), q(t, this.s));
             }
         }
         X(t) {}
@@ -230,7 +230,7 @@ gs = () => {
             l[7] && t < 0 && (this.i0 = tt + i.a0, i.r0 && 0 == i.n0 ? e(Ht) : (i.l0(this.p, this.k, this.F), 
             dt(F0, this.p, 10, 255)._ = tt + .1)), this.e0 += 1e-4 * z(this.a), this.f = this.q ? 10 : 2.5, 
             this.H(), h0.x = this.p.x, h0.z = this.p.z, h0.y = this.p.y + 8 - -160 * w(tt - this.O, 0, .1), 
-            a0 = this.k, e0 = this.F, _0(D(h0, A(b(0, .3 * Math.sin(this.e0) - 10, 12 + w(k(t, 0, i.a0, 5, 0), 0, 5)), this.k, this.F)), this.k + Math.PI / 2, this.F, i.V, i.K.f[0], i.K.f[0], 0, i.K.nv), 
+            a0 = this.k, e0 = this.F, _0(q(h0, A(b(0, .3 * Math.sin(this.e0) - 10, 12 + w(k(t, 0, i.a0, 5, 0), 0, 5)), this.k, this.F)), this.k + Math.PI / 2, this.F, i.V, i.K.f[0], i.K.f[0], 0, i.K.nv), 
             h.textContent = 0 | this.h, a.textContent = i.r0 ? i.n0 : "∞";
         }
         $(t, i) {
@@ -252,7 +252,7 @@ gs = () => {
                 this.c0 = tt + 3;
             }
             this.c0 < tt ? this.d0 = Math.max(0, this.d0 - J0) : this.d0 = Math.min(1, this.d0 + J0), 
-            this.p = D(this.o0, F(b(96 * this.d0, 0, 0), this.k));
+            this.p = q(this.o0, F(b(96 * this.d0, 0, 0), this.k));
         }
         $() {}
     }
@@ -273,9 +273,9 @@ gs = () => {
             this.V = 30, this.K = Et, this.T = [ .05, [ 0, 1, 2, 1, 2, 0, 0, 1, 2 ] ], this.p.x -= 16, 
             this.p.z -= 16, this.m0 = this.p;
             for (var t of [ b(-32, 0, 0), b(32, 0, 0), b(0, 0, -32), b(0, 0, 32) ]) {
-                D(this.p, t);
-                if (y0(this.p, D(this.p, t))) {
-                    this.p = D(this.p, C(t, .4)), this.m0 = q(this.p, C(t, 2));
+                q(this.p, t);
+                if (y0(this.p, q(this.p, t))) {
+                    this.p = q(this.p, C(t, .4)), this.m0 = D(this.p, C(t, 2));
                     break;
                 }
             }
@@ -297,7 +297,7 @@ gs = () => {
             }
             super.L(), this.B(Zt);
             for (var s of xt) this.Z(2, 600, s, 21, 1);
-            dt(F0, D(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2, et = et.filter(t => t != this);
+            dt(F0, q(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2, et = et.filter(t => t != this);
         }
     }
     class z0 extends k0 {
@@ -313,7 +313,7 @@ gs = () => {
             this.V = 8, this.K = Yt, this._ = tt + 2, this.M = .5, this.M0 = 120;
         }
         I() {
-            super.H(), this.j(), v0(D(this.p, b(0, 16, 0)), .5 * (Math.sin(10 * tt) + 2), 255, 32, 0), 
+            super.H(), this.j(), v0(q(this.p, b(0, 16, 0)), .5 * (Math.sin(10 * tt) + 2), 255, 32, 0), 
             this.f = this.q ? 5 : .5;
         }
         X(t) {
@@ -327,10 +327,10 @@ gs = () => {
                 var i = U(this.p, t.p);
                 i < 196 && t.$(this, k(i, 0, 196, this.M0, 0));
             }
-            super.L(), this.B(Zt), this.Z(20, 800, mt, 8, 1), dt(F0, D(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2;
+            super.L(), this.B(Zt), this.Z(20, 800, mt, 8, 1), dt(F0, q(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2;
         }
     }
-    class D0 extends k0 {
+    class q0 extends k0 {
         Y() {
             this.V = 2, this.K = model_nail, this.g = 0, this._ = tt + 3;
         }
@@ -344,7 +344,7 @@ gs = () => {
             this.L(), t.$(this, 9);
         }
     }
-    class q0 extends k0 {
+    class D0 extends k0 {
         Y() {
             this.V = 21, this.K = model_nail, this.g = 0, this._ = tt + 3;
         }
@@ -352,7 +352,7 @@ gs = () => {
             this.H(), this.j(), v0(this.p, 5, 255, 128, 0);
         }
         X(t) {
-            this.L(), this.B(Qt), this.Z(2, 80, mt, 8, .4), dt(F0, D(this.p, b(0, 10, 0)), 5, 245)._ = tt + .1;
+            this.L(), this.B(Qt), this.Z(2, 80, mt, 8, .4), dt(F0, q(this.p, b(0, 10, 0)), 5, 245)._ = tt + .1;
         }
         G(t) {
             this.L(), t.$(this, 15);
@@ -392,7 +392,7 @@ gs = () => {
             this.x0 = [ 0, 0, .1 ], this.y0 = [ 1, .5, .5 ], this.w0 = [ 2, 1, .3 ], this.k0 = [ 0, 0, .1, this.w0 ], 
             this.b0 = [ 4, 0, .4, this.k0 ], this.A0 = [ 3, 0, .4, this.b0 ], this.F0 = [ 0, 0, .1, this.A0 ], 
             this.E0 = [ 2, 1, .8, this.F0 ], this.s = b(12, 28, 12), this.m = 17, this.J = 196, 
-            this.T0 = this.k, this.z0 = 0, this.U0 = 800, this.D0 = 96, this.q0 = .65, this.C = 1, 
+            this.T0 = this.k, this.z0 = 0, this.U0 = 800, this.q0 = 96, this.D0 = .65, this.C = 1, 
             this.C0 = 1, this.N = 1, et.push(this), t ? (this.N0(this.y0), this.T0 = Math.PI / 2 * t, 
             this.U = Math.random()) : this.N0(this.x0);
         }
@@ -403,7 +403,7 @@ gs = () => {
             var t, i;
             this.z0 < tt && (this.C0 = .5 < Math.random() ? .5 : -.5, t = U(this.p, rt.p), i = E(this.p, rt.p), 
             this.O0[3] && this.N0(this.O0[3]), this.O0 == this.w0 && (y0(this.p, rt.p) || (this.T0 = i), 
-            t < this.U0 && (t < this.D0 || Math.random() > this.q0 ? (this.N0(this.E0), this.T0 += Math.PI / 2 + Math.random() * Math.PI) : this.N0(this.F0))), 
+            t < this.U0 && (t < this.q0 || Math.random() > this.D0 ? (this.N0(this.E0), this.T0 += Math.PI / 2 + Math.random() * Math.PI) : this.N0(this.F0))), 
             this.O0 == this.k0 && (this.T0 = i), this.O0 != this.y0 && this.O0 != this.x0 || t < 700 && !y0(this.p, rt.p) && this.N0(this.F0), 
             this.O0 == this.F0 && (this.T0 = i, y0(this.p, rt.p) && this.N0(this.E0)), this.O0 == this.b0 && this.S0()), 
             this.k += .1 * (i = this.T0 - this.k, Math.atan2(Math.sin(i), Math.cos(i))), this.q && (this.v = F(b(0, this.v.y, this.O0[1] * this.J), this.T0)), 
@@ -432,7 +432,7 @@ gs = () => {
             super.Y(t), this.K = yt, this.V = 17, this.h = 40;
         }
         S0() {
-            this.B(Pt), dt(F0, D(this.p, b(0, 30, 0)), 10, 255)._ = tt + .1;
+            this.B(Pt), dt(F0, q(this.p, b(0, 30, 0)), 10, 255)._ = tt + .1;
             for (let t = 0; t < 3; t++) this.Y0(N0, 1e4, .08 * Math.random() - .04, .08 * Math.random() - .04);
         }
     }
@@ -441,7 +441,7 @@ gs = () => {
             super.Y(t), this.K = wt, this.V = 19, this.h = 80, this.s = b(14, 44, 14);
         }
         S0() {
-            this.B(Rt), this.Y0(q0, 800, 0, 0);
+            this.B(Rt), this.Y0(D0, 800, 0, 0);
         }
     }
     class I0 extends O0 {
@@ -470,7 +470,7 @@ gs = () => {
     class j0 extends O0 {
         Y(t) {
             super.Y(t), this.K = At, this.V = 22, this.h = 25, this.N = 1, this.s = b(12, 16, 12), 
-            this.U0 = 200, this.D0 = 64, this.q0 = .7, this.J = 256, this.g0 = [ [ 1, [ 0 ] ], [ .15, [ 0, 1 ] ], [ .15, [ 0, 1 ] ], [ 1, [ 0 ] ], [ .1, [ 0, 1, 1, 1, 0, 0, 0 ] ] ], 
+            this.U0 = 200, this.q0 = 64, this.D0 = .7, this.J = 256, this.g0 = [ [ 1, [ 0 ] ], [ .15, [ 0, 1 ] ], [ .15, [ 0, 1 ] ], [ 1, [ 0 ] ], [ .1, [ 0, 1, 1, 1, 0, 0, 0 ] ] ], 
             this.y0 = [ 1, .2, .5 ], this.k0 = [ 0, 0, .5, this.w0 ], this.b0 = [ 4, 0, 1, this.k0 ], 
             this.A0 = [ 3, 0, 0, this.b0 ], this.F0 = [ 0, 0, 0, this.A0 ], this.E0 = [ 2, 1, .3, this.F0 ], 
             this.N0(this.x0);
@@ -509,7 +509,7 @@ gs = () => {
     }
     class R0 extends H0 {
         Y() {
-            super.Y(), this.V = 12, this.K = Dt;
+            super.Y(), this.V = 12, this.K = qt;
         }
         I() {
             this.k += .02, super.I();
@@ -520,7 +520,7 @@ gs = () => {
     }
     class P0 extends H0 {
         Y() {
-            super.Y(), this.V = 21, this.K = qt;
+            super.Y(), this.V = 21, this.K = Dt;
         }
         I() {
             this.k += .02, super.I();
@@ -566,7 +566,7 @@ gs = () => {
             this.r0 && this.n0--, e(this.L0), this.Y0(t, i, s);
         }
         Y0(t, i, s) {
-            let h = dt(this.R0, D(t, D(b(0, 12, 0), A(this.H0, i, s))));
+            let h = dt(this.R0, q(t, q(b(0, 12, 0), A(this.H0, i, s))));
             h.v = A(b(0, 0, this.P0), i, s), h.k = i - Math.PI / 2, h.F = -s, h.N = 2, this.H0.x *= -1;
         }
     }
@@ -582,7 +582,7 @@ gs = () => {
     }
     class $0 extends W0 {
         Y() {
-            this.V = 4, this.K = zt, this.L0 = Gt, this.n0 = 100, this.a0 = .09, this.R0 = D0, 
+            this.V = 4, this.K = zt, this.L0 = Gt, this.n0 = 100, this.a0 = .09, this.R0 = q0, 
             this.P0 = 1300, this.H0 = b(6, 0, 8);
         }
     }
@@ -617,7 +617,7 @@ gs = () => {
         for (var s of ht) s.l || (s.I(), i.push(s));
         ht = i, w0(), d0(), v = M = 0, l[d] = l[o] = 0, lt && (lt = 0, nt++, 2 == nt ? (pt("THE END", "THANKS FOR PLAYING ❤"), 
         h.textContent = a.textContent = "", rt.l = 1, h0 = b(1856, 784, 2272), a0 = 0, e0 = .5) : ot(nt));
-    }, ut, vt, mt, Mt, gt, xt = [], yt, wt, kt, bt, At, Ft, Et, Tt, zt, Ut, Dt, qt, Ct, Nt, Ot, St, Yt, It, Kt, jt, Ht, Lt, Rt, Pt, Xt, Gt, Qt, Vt, Wt, Zt, $t = t => {
+    }, ut, vt, mt, Mt, gt, xt = [], yt, wt, kt, bt, At, Ft, Et, Tt, zt, Ut, qt, Dt, Ct, Nt, Ot, St, Yt, It, Kt, jt, Ht, Lt, Rt, Pt, Xt, Gt, Qt, Vt, Wt, Zt, $t = t => {
         c0(), _0(b(0, 0, 0), 0, 0, 1, model_q.f[0], model_q.f[0], 0, model_q.nv), v0(b(200 * Math.sin(33e-5 * t), 100, -100), 10, 255, 192, 32), 
         v0(F(b(0, 0, 100), 63e-5 * t), 10, 32, 64, 255), v0(F(b(100, 0, 0), 53e-5 * t), 10, 196, 128, 255), 
         d0(), requestAnimationFrame($t);
@@ -663,7 +663,7 @@ gs = () => {
         })("m"), model_q = m0(vt[3]), mt = m0(vt[0], .1, .1, .1), Mt = m0(vt[0], .1, .2, .1), 
         gt = m0(vt[0], .3, .6, .3), yt = m0(vt[1], 2.5, 2.2, 2.5), wt = m0(vt[1], 3, 2.7, 3), 
         bt = m0(vt[1], 1.5, 2, 1.5), kt = m0(vt[1], 4, 3, 4), At = m0(vt[4], 2.5, 2.5, 2.5), 
-        Ft = m0(vt[2], 2, 2, 2), Et = m0(vt[7], .6, 1, .6), Dt = m0(vt[6], 1, 1, 1), qt = m0(vt[2], 1, .5, .5), 
+        Ft = m0(vt[2], 2, 2, 2), Et = m0(vt[7], .6, 1, .6), qt = m0(vt[6], 1, 1, 1), Dt = m0(vt[2], 1, .5, .5), 
         Ct = m0(vt[5], .7, .7, .7), Nt = m0(vt[5], .5, 1, .5), Ot = m0(vt[5], .1, .7, .1), 
         St = m0(vt[5], 5, 5, .5), Tt = m0(vt[2], 1, .2, .2), Ut = m0(vt[2], .7, .4, .4), 
         zt = m0(vt[6], .7, .7, .7), Yt = m0(vt[2], .3, .3, .3), model_nail = m0(vt[2], .5, .1, .1);
