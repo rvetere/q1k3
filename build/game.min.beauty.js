@@ -1,0 +1,709 @@
+gs = () => {
+    document.body.innerHTML += '<style>*{font-family:sans-serif;}a,body{color:#fff;background:#111;text-align:center;margin:0;}#c{display:block;width:100%;image-rendering:optimizeSpeed;image-rendering:pixelated;max-height:100vh;object-fit:contain;}#g{position:relative;margin:0 0 32px 0;font-weight:bold;}#ts{position:absolute;bottom:2em;left:0;right:0;font-size:1.2vw;}#msg{position:absolute;top:8vw;left:0;right:0;font-size:1.2vw;display:none;}#a,#h{position:absolute;bottom:3%;left:20%;right:0;font-size:3.2vw;}#h{left:-20%;}h1{font-size:16vw;margin:0;}</style><div id="g"><canvas id=c width=320 height=180></canvas><div id="ts"><h1>Q1K3</h1>CLICK TO START</div><div id="h"></div><div id="a"></div><div id="msg"></div></div><p>MOUSE SPEED: <input id="m" type="range" value=10 min=1 max=50> INVERT: <input type="checkbox" id="mi"></p><p><input id="f" type="button" value="FULLSCREEN"></p><p>code: <a href="https://phoboslab.org">phoboslab.org</a> / music: <a href="http://no-fate.net">no-fate.net</a></p>';
+    let t = [ [ 64, 64, 0, 2, 3, 1.4, 2, 17176, 1.3 ], [ 64, 64, 38751, 1, 18, 4, 2, 2, 27, 9, 65530, 0, 7, 1, -1, 9, 13, 5, 52, 8, 8, 65528, 39039, 4, 0, 0, 0, 64, 512, 15, 4, 0, 0, 0, 64, 64, 14 ], [ 64, 64, 38751, 1, 18, 4, 2, 2, 27, 9, 65530, 0, 7, 1, -1, 0, 13, 64, 52, 64, 8, 65531, 39039, 4, 0, 0, 0, 64, 512, 15, 4, 0, 0, 0, 64, 64, 14 ], [ 64, 64, 13119, 4, 1, 0, 0, 64, 64, 15, 0, 24, 11, 17, 50, 65523, 2, 8 ], [ 32, 32, 21839, 1, 0, 2, 10, 2, 11, 4, 65528, 10, 25931, 4, 0, 0, 0, 32, 32, 14 ], [ 32, 32, 17487, 0, 1, 1, 30, 30, 65528, 11, 21580, 4, 0, 0, 0, 32, 32, 15 ], [ 32, 32, 30015, 4, 5, 0, 0, 32, 32, 15, 1, 5, 4, 2, 2, 22, 6, 65522, 0, 8 ], [ 32, 32, 8751, 1, 1, 1, 8, 4, 11, 5, 65524, 15, 17487, 4, 0, 0, 0, 64, 64, 15 ], [ 32, 32, 13119, 4, 4, 0, 0, 32, 32, 15, 1, 10, 3, 11, 6, 25, 10, 64536, 64568, 65519 ], [ 32, 32, 8751, 1, 1, 1, 3, 3, 4, 4, 65524, 14, 21565, 1, 1, -1, 15, 1, 16, 16, 65522, 7, 0, 1, -1, 0, 1, 15, 16, 6, 65521, 0, 4, 4, 0, 0, 0, 32, 32, 15 ], [ 32, 32, 8719, 2, 63506, 1, 4, 0, 0, 0, 32, 32, 12 ], [ 32, 32, 21295, 4, 10, 0, -4, 32, 298, 10, 2, 4372, 1 ], [ 32, 32, 8463, 1, -1, 1, 35, 1, 35, 4, 65522, 10, 34399, 0, -1, 6, 34, 6, 65526, 2, 34399, 2, 29479, 1, 4, 6, 0, 0, 32, 32, 5 ], [ 32, 32, 5535, 4, 0, 0, 0, 128, 64, 14 ], [ 32, 32, 8463, 1, 0, 0, 3, 3, 4, 4, 0, 10, 65521, 0, 4, 4, 23, 23, 10, 64885, 21551, 3, 4, 16, 13, 0, 11, "::][::", 4, 0, 4, 4, 26, 26, 15 ], [ 32, 32, 8751, 1, 1, 1, 8, 3, 11, 5, 65524, 15, 17487, 0, 9, 6, 14, 13, 15, 65525, 4383, 4, 0, 0, 0, 64, 64, 12, 3, 10, 11, 20267, 0, 8, "---" ], [ 32, 32, 17487, 4, 5, 0, 0, 32, 32, 15, 1, 4, 4, 3, 3, 22, 22, 65523, 7, 30587 ], [ 64, 64, 38767, 2, 36875, 2.5, 1, 4, 10, 15, 8, 39, 59, 15, 15, 8463, 1, 3, 30, 14, 5, 15, 6, 12813, 4367, 38671, 0, 20, 1, 22, 6, 13119, 10, 38671, 4, 0, 0, 0, 64, 64, 11 ], [ 32, 32, 40975, 2, 63308, 1.5, 2, 63751, 7.3 ], [ 64, 64, 13119, 4, 17, 0, 0, 64, 64, 15, 0, 0, 29, 64, 64, 0, 0, 89, 4, 4, 21, -6, 22, 24, 15 ], [ 32, 32, 13119, 4, 9, 0, 0, 32, 32, 15, 4, 8, 6, -22, 21, 32, 15, 4, 18, 0, 0, 32, 32, 4 ], [ 64, 64, 13119, 0, 0, 0, 64, 64, 0, 0, 64271, 3, -1, 50, 33795, 0, 32, "XXX", 4, 7, 0, 0, 64, 64, 6 ], [ 64, 64, 34063, 4, 7, 0, 0, 64, 64, 12, 2, 12554, 1 ], [ 32, 32, 65535, 4, 12, 0, 0, 32, 32, 9, 3, 6, 30, 61455, 0, 25, "+" ], [ 32, 32, 5903, 4, 12, 0, 0, 32, 32, 9, 3, 5, 14, 65529, 0, 12, "NIИ" ], [ 32, 32, 64271, 0, 12, 1, 7, 30, 65528, 8, 63247, 4, 7, 0, 0, 32, 32, 8 ], [ 32, 32, 13119, 1, 1, 1, 14, 14, 16, 32, 56328, 15, 26399, 1, -7, 17, 14, 14, 16, 32, 56328, 8, 26159, 2, 29706, 1, 4, 0, 0, 0, 32, 320, 14 ], [ 32, 32, 33567, 1, 1, 1, 6, 30, 16, 31, 65526, 15, 33823, 1, 9, -14, 6, 30, 16, 32, 65526, 15, 29743, 2, 55625, 1.5, 4, 0, 0, 0, 32, 320, 15 ], [ 32, 32, 12559, 1, 1, 1, 14, 14, 16, 16, 65525, 7, 21295, 0, 1, 1, 14, 14, 65525, 0, 34399, 0, 17, 17, 14, 14, 65524, 0, 34399, 2, 8, 1.5 ], [ 32, 32, 9503, 4, 11, 0, 0, 32, 32, 12, 1, 1, 1, 6, 7, 6, 8, 65521, 0, 4 ], [ 32, 32, 15, 4, 18, 0, 16, 32, 32, 15, 4, 27, 0, -16, 32, 32, 10 ] ], i = [ 6014, 21, 88, [ [ [ 7, 0, 0, 1, 255, 0, 7, 0, 0, 1, 255, 0, 0, 100, 0, 3636, 254, 2, 1199, 254, 4, 71, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1 ], [ [ 126, 126, 0, 0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 126, 126, 0, 0, 126, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 6, 0, 0, 0, 255, 2, 6, 0, 18, 0, 255, 2, 0, 1e5, 56363, 1e5, 199, 2, 200, 254, 8, 24, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 2, 2, 3, 4, 2, 2, 3, 5, 2, 2, 3, 4, 2, 2, 3, 5 ], [ [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 7, 0, 0, 0, 87, 2, 8, 0, 0, 0, 16, 3, 8, 0, 22, 2193, 255, 3, 1162, 51, 10, 182, 2, 190, 0, 1, 10, 96, 0 ], [ 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 ], [ [ 149, 149, 0, 0, 149, 0, 149, 0, 149, 149, 0, 0, 149, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ], [ [ 8, 0, 0, 0, 65, 2, 6, 0, 0, 0, 243, 3, 0, 200, 7505, 2e4, 204, 4, 6180, 81, 4, 198, 0, 0, 0, 0, 6, 131, 0 ], [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 1, 1, 2, 3 ], [ [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ], [ 132, 0, 0, 0, 0, 0, 0, 0, 133, 0, 0, 0, 125, 0, 0, 0, 0, 0, 0, 0, 125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ] ] ] ] ], n, V = 44100, W = 4096, Z = W - 1, $ = new Float32Array(4 * W), e = (t, i = 1, s = 0, h = 0) => {
+        let e = n.createGain(), a = n.createBufferSource(), r = n.createStereoPanner();
+        e.gain.value = i, e.connect(n.destination), r.connect(e), r.pan.value = h, a.buffer = t, 
+        a.loop = s, a.connect(r), a.start();
+    }, _ = (t, i) => {
+        let s = n.createBuffer(2, t.length, V);
+        return s.getChannelData(0).set(t), s.getChannelData(1).set(i), s;
+    }, p = (t, i, n, l, o, s, h, e, c, d, a, r, _, p, f, u, v, m, M, g, x, y, w, k, b, A, F, E, T, z, U, D, q, C) => {
+        let N = C * W, O = a * W, S = v * W, Y = Math.pow(2, E - 8) / t, I = Math.pow(2, D - 8) / t, K = 0, j = 0, H = b / 255, L = 0, R = 0, P, X = (n.length, 
+        M + g + x - 1), G = .00390625 * Math.pow(1.059463094, i + 12 * (s - 8) + h - 128) * (1 + 8e-4 * e), Q = .00390625 * Math.pow(1.059463094, i + 12 * (r - 8) + _ - 128) * (1 + 8e-4 * p);
+        for (let r = X; 0 <= r; --r) {
+            let t = r + o, i = $[N + (t * I * W & Z)] * q / 512 + .5, s = 0, h = k, e, a = 1;
+            r < M ? a = r / M : r >= M + g && (a -= (r - M - g) / x), e = G, z && (e *= i), 
+            c && (e *= a * a), K += e, s += $[O + (K * W & Z)] * d, e = Q, f && (e *= a * a), 
+            j += e, s += $[S + (j * W & Z)] * u, m && (s += (2 * Math.random() - 1) * m * a), 
+            s *= a / 255, U && (h *= i), h = 1.5 * $[.5 * h / V * W & Z], L += h * R, P = H * (s - R) - L, 
+            R += h * P, s = [ s, P, L, R, L + P ][w], e = $[t * Y * W & Z] * T / 512 + .5, s *= .00476 * y, 
+            n[t] += s * (1 - e), l[t] += s * e;
+        }
+    }, s = (t, i, s = 5605) => {
+        var h = i[20] * s >> 1, e = i[21] / 255, a = i[13] + i[14] + i[15] + 32 * h * e, r = new Float32Array(a), a = new Float32Array(a);
+        return p(s, t, r, a, 0, ...i), u(h, e, r, a), _(r, a);
+    }, u = (i, s, h, e) => {
+        for (let t = 0; t < h.length - i; t++) h[t + i] += e[t] * s, e[t + i] += h[t] * s;
+    }, r = {
+        W: 1,
+        p: 1,
+        A: 2,
+        e: 2,
+        S: 3,
+        o: 3,
+        D: 4,
+        i: 4,
+        Q: 5,
+        E: 6,
+        c: 9
+    }, l = [ 0, 0, 0, 0, 0, 0, 0 ], o = 5, d = 6, v = 0, M = 0, x = 0;
+    document.onkeydown = t => {
+        var i = r[t.code[6] || t.code[3]];
+        i && (t.preventDefault(), l[i] = 1);
+    }, document.onkeyup = t => {
+        var i = r[t.code[6] || t.code[3]];
+        i && (t.preventDefault(), l[i] = 0);
+    }, document.onwheel = t => {
+        .1 < tt - x && (l[o + (1 < t.deltaY ? 1 : 0)] = 1, x = tt);
+    }, c.onmousemove = t => {
+        v += t.movementX, M += t.movementY;
+    }, c.onmousedown = t => {
+        t.preventDefault(), l[7 + t.button] = 1;
+    }, c.onmouseup = t => {
+        t.preventDefault(), l[7 + t.button] = 0;
+    };
+    let y = (l, s = -1, o = 0) => l.filter((t, i) => s < 0 || i == s).map(i => {
+        let s = 0, c = document.createElement("canvas"), r = c.getContext("2d"), n = t => "rgba(" + [ 17 * (t >> 12 & 15), 17 * (t >> 8 & 15), 17 * (t >> 4 & 15), (15 & t) / 15 ].join() + ")", d = (s, h, e, a, ...t) => t.map((t, i) => {
+            r.fillStyle = n(t), r.fillRect(s + [ -1, 1, 0 ][i], h + [ -1, 1, 0 ][i], e, a);
+        });
+        for (c.width = i[s++], c.height = i[s++], d(0, 0, c.width, c.height, 0, 0, i[s++]); s < i.length; ) {
+            let t = [ (t, i, s, h, e, a, r) => {
+                d(t, i, s, h, e, a, r);
+            }, (t, s, h, e, a, r, n, l, o) => {
+                for (let i = t; i < c.width; i += a) for (let t = s; t < c.height; t += r) d(i, t, h, e, n, l, o);
+            }, (s, h) => {
+                for (let i = 0; i < c.width; i += h) for (let t = 0; t < c.height; t += h) d(i, t, h, h, 0, 0, (65520 & s) + Math.random() * (15 & s));
+            }, (t, i, s, h, e, a) => {
+                r.fillStyle = n(s), r.font = e + "px " + [ "sans-", "" ][h] + "serif", r.fillText(a, t, i);
+            }, (t, i, s, h, e, a) => {
+                r.globalAlpha = a / 15, t < l.length && o < 16 && r.drawImage(y(l, t, o + 1)[0], i, s, h, e), 
+                r.globalAlpha = 1;
+            } ][i[s++]];
+            t(...i.slice(s, s += t.length));
+        }
+        return c;
+    }), w = (t, i, s) => t < i ? i : s < t ? s : t, k = (t, i, s, h, e) => h + (t - i) / (s - i) * (e - h), b = (t = 0, i = 0, s = 0) => ({
+        x: t,
+        y: i,
+        z: s
+    }), A = (t, i, s) => F(((t, i) => b(t.x, t.y * Math.cos(i) - t.z * Math.sin(i), t.y * Math.sin(i) + t.z * Math.cos(i)))(t, s), i), F = (t, i) => b(t.z * Math.sin(i) + t.x * Math.cos(i), t.y, t.z * Math.cos(i) - t.x * Math.sin(i)), E = (t, i) => Math.atan2(i.x - t.x, i.z - t.z), T = t => b(t.x, t.y, t.z), z = t => Math.hypot(t.x, t.y, t.z), U = (t, i) => z(q(t, i)), D = (t, i) => b(t.x + i.x, t.y + i.y, t.z + i.z), q = (t, i) => b(t.x - i.x, t.y - i.y, t.z - i.z), C = (t, i) => b(t.x * i, t.y * i, t.z * i), N = t => C(t, 1 / z(t)), O = (t, i, s) => N(((t, i) => b(t.y * i.z - t.z * i.y, t.z * i.x - t.x * i.z, t.x * i.y - t.y * i.x))(q(t, i), q(s, i))), S = {
+        antialias: !1
+    }, Y = c.getContext("webgl", S) || c.getContext("experimental-webgl", S), I = "precision highp float;varying vec3 vp,vn;varying vec2 vt;attribute vec3 p,n,p2,n2;attribute vec2 t;uniform vec4 c;uniform vec3 mp;uniform vec2 mr;uniform vec2 m;uniform float f;mat4 rx(float r){return mat4(1,0,0,0,0,cos(r),sin(r),0,0,-sin(r),cos(r),0,0,0,0,1);}mat4 ry(float r){return mat4(cos(r),0,-sin(r),0,0,1,0,0,sin(r),0,cos(r),0,0,0,0,1);}mat4 rz(float r){return mat4(cos(r),sin(r),0,0,-sin(r),cos(r),0,0,0,0,1,0,0,0,0,1);}void main(void){mat4 mry=ry(mr.x),mrz=rz(mr.y);vp=(mry*mrz*vec4(mix(p,p2,f),1.)).xyz+mp;vn=(mry*mrz*vec4(mix(n,n2,f),1.)).xyz;vt=t;gl_Position=mat4(1,0,0,0,0,c.w,0,0,0,0,1,1,0,0,-2,0)*rx(-m.y)*ry(-m.x)*vec4(vp-c.xyz,1.);}", K = "precision highp float;varying vec3 vp,vn;varying vec2 vt;uniform sampler2D s;uniform vec3 l[64];void main(void){gl_FragColor=texture2D(s,vt);vec3 vl;for(int i=0;i<64;i+=2) {vl+=max(dot(vn, normalize(l[i]-vp)),0.)*(1./pow(length(l[i]-vp),2.))*l[i+1];}gl_FragColor.rgb=floor(gl_FragColor.rgb*pow(vl,vec3(0.75))*16.0+0.5)/16.0;}", j = new Float32Array(524288), H = 0, L = new Float32Array(192), R = 0, P, X, G, Q, B, J, t0, i0, s0 = [], h0 = b(0, 0, -50), e0 = .2, a0 = 0, r0 = [], n0 = (t, i) => {
+        t = Y.crS(t);
+        return Y.shS(t, i), Y.coS(t), t;
+    }, l0 = (t, i, s, h, e) => {
+        i = Y.geAL(t, i);
+        return Y.enVAA(i), Y.veAP(i, s, 5126, !1, 4 * h, 4 * e), i;
+    }, o0 = t => {
+        var i = {
+            t: Y.crT(),
+            c: t
+        };
+        Y.biT(3553, i.t), Y.teI2D(3553, 0, 6408, 6408, 5121, t), Y.teP(3553, 10240, 9728), 
+        Y.teP(3553, 10241, 9984), Y.teP(3553, 10242, 10497), Y.teP(3553, 10243, 10497), 
+        Y.geM(3553), s0.push(i);
+    }, c0 = (t, i, s) => {
+        Y.clC(t, i, s, 1), Y.cl(16640), R = 0, L.fill(0);
+    }, d0 = () => {
+        Y.un4f(P, h0.x, h0.y, h0.z, 16 / 9), Y.un2f(G, a0, e0), Y.un3fv(X, L);
+        let t = 0, i = -1;
+        for (var s of r0) i != s[5] && (i = s[5], Y.biT(3553, s0[i].t)), Y.un3f(Q, s[0], s[1], s[2]), 
+        Y.un2f(B, s[3], s[4]), Y.un1f(J, s[8]), t != s[7] - s[6] && (t = s[7] - s[6], Y.veAP(t0, 3, 5126, !1, 32, 8 * t * 4), 
+        Y.veAP(i0, 3, 5126, !1, 32, 4 * (8 * t + 5))), Y.drA(4, s[6], s[9]);
+        r0 = [];
+    }, _0 = (t, i, s, h, e, a, r, n) => {
+        r0.push([ t.x, t.y, t.z, i, s, h, e, a, r, n ]);
+    }, p0 = (t, i, s, h) => {
+        j.set([ t.x, t.y, t.z, s, h, i.x, i.y, i.z ], 8 * H), H++;
+    }, f0 = (t, i, s, h, e, a) => {
+        var r = O(t, i, s);
+        p0(t, r, e, 0), p0(i, r, 0, 0), p0(s, r, e, a), p0(h, r, 0, a), p0(s, r, e, a), 
+        p0(i, r, 0, 0);
+    }, u0 = (t, i, s, h, e, a, r) => {
+        var n = s0[r].c, l = H, o = h / n.width, c = e / n.height, d = a / n.width, _ = b(t, i + e, s), p = b(t + h, i + e, s), f = b(t, i + e, s + a), r = b(t + h, i + e, s + a), n = b(t, i, s + a), e = b(t + h, i, s + a), a = b(t, i, s), s = b(t + h, i, s);
+        return f0(_, p, f, r, o, d), f0(n, e, a, s, o, d), f0(f, r, n, e, o, c), f0(p, _, s, a, o, c), 
+        f0(r, p, e, s, d, c), f0(_, f, a, n, d, c), l;
+    }, v0 = (t, i, s, h, e) => {
+        i = w(k(U(t, h0), 768, 1024, 1, 0), 0, 1) * i * 10;
+        i && R < 32 && (L.set([ t.x, t.y, t.z, s * i, h * i, e * i ], 6 * R), R++);
+    }, m0 = (i, s = 1, h = 1, e = 1) => {
+        let a = 0, r = i[a++], n = i[a++], l = i[a++], o = new Float32Array(n * r * 3), c = new Uint8Array(3 * l), d = 0, _ = 16, p = -16, f = 16, u = -16;
+        for (let t = 0; t < n * r * 3; t += 3) o[t] = (i[a++] - 15) * s, o[t + 1] = (i[a++] - 15) * h, 
+        o[t + 2] = (i[a++] - 15) * e, t < 3 * n && (_ = Math.min(_, o[t]), p = Math.max(p, o[t]), 
+        f = Math.min(f, o[t + 1]), u = Math.max(u, o[t + 1]));
+        for (let t = 0; t < 3 * l; t += 3) d += i[a++], c[t] = d, c[t + 1] = i[a++], c[t + 2] = i[a++];
+        var v = 1 / (p - _), m = -_ * v, M = -1 / (u - f), g = u * M;
+        let x = [];
+        for (let t = 0; t < r; t++) {
+            x.push(H);
+            var y = t * n * 3;
+            for (let h = 0; h < 3 * l; h += 3) {
+                let i = [], s = [];
+                for (let t = 0; t < 3; t++) {
+                    var w = 3 * c[h + t];
+                    i[t] = b(o[y + w], o[y + w + 1], o[y + w + 2]), s[t] = {
+                        u: o[0 + w] * v + m,
+                        v: o[1 + w] * M + g
+                    };
+                }
+                var k = O(i[2], i[1], i[0]);
+                p0(i[2], k, s[2].u, s[2].v), p0(i[1], k, s[1].u, s[1].v), p0(i[0], k, s[0].u, s[0].v);
+            }
+        }
+        return {
+            f: x,
+            nv: 3 * l
+        };
+    }, M0, g0 = 128, x0 = (t, i, s) => M0.cm[s * g0 * g0 + i * g0 + t >> 3] & 1 << (7 & t), y0 = (i, t) => {
+        var t = q(t, i), s = C(N(t), 16), h = z(t) / 16;
+        for (let t = 0; t < h; t++) if (i = D(i, s), x0(i.x >> 5, i.y >> 4, i.z >> 5)) return i;
+        return null;
+    }, w0 = () => {
+        var t, i = b();
+        for (t of M0.r) _0(i, 0, 0, t.t, t.b, t.b, 0, 36);
+    };
+    class k0 {
+        constructor(t, i, s) {
+            this.a = b(), this.v = b(), this.p = t, this.s = b(2, 2, 2), this.f = 0, this.h = 50, 
+            this.l = 0, this._ = 0, this.m = 0, this.M = 0, this.g = 1, this.k = 0, this.F = 0, 
+            this.T = [ 1, [ 0 ] ], this.U = Math.random(), this.q = 0, this.C = 0, this.N = 0, 
+            this.O = 0, this.Y(i, s);
+        }
+        Y(t, i) {}
+        I() {
+            this.K && this.j();
+        }
+        H() {
+            if (this._ && this._ < tt) this.L(); else {
+                this.a.y = -1200 * this.g;
+                var t, i = Math.min(this.f * J0, 1);
+                this.v = D(this.v, q(C(this.a, J0), (t = this.v, i = b(i, 0, i), b(t.x * i.x, t.y * i.y, t.z * i.z)))), 
+                this.R = [ [], at, et ][this.N];
+                var s, h = this.m, i = C(this.v, J0), e = Math.ceil(z(i) / 16), a = C(i, 1 / e);
+                for (let i = 0; i < e; i++) {
+                    let t = T(this.p);
+                    this.p = D(this.p, a), this.P(b(this.p.x, t.y, t.z)) && (!this.m || !this.q || 0 < this.v.y || this.P(b(this.p.x, t.y + this.m, t.z)) ? (this.X(0), 
+                    this.p.x = t.x, this.v.x = -this.v.x * this.M) : (t.y += this.m, this.O = tt), i = e), 
+                    this.P(b(this.p.x, t.y, this.p.z)) && (!this.m || !this.q || 0 < this.v.y || this.P(b(this.p.x, t.y + this.m, this.p.z)) ? (this.X(2), 
+                    this.p.z = t.z, this.v.z = -this.v.z * this.M) : (t.y += this.m, this.O = tt), i = e), 
+                    this.P(this.p) && (this.X(1), this.p.y = t.y, s = 200 < Math.abs(this.v.y) ? this.M : 0, 
+                    this.q = this.v.y < 0 && !s, this.v.y = -this.v.y * s, i = e), this.m = h;
+                }
+            }
+        }
+        P(t) {
+            if (!this.l) {
+                for (var i of this.R) if (U(t, i.p) < this.s.y + i.s.y) return this.m = 0, this.G(i), 
+                !0;
+                return !(!this.q || !this.C || x0(t.x >> 5, t.y - this.s.y - 8 >> 4, t.z >> 5) || x0(t.x >> 5, t.y - this.s.y - 24 >> 4, t.z >> 5)) || ((h, e) => {
+                    for (let s = h.z >> 5; s <= e.z >> 5; s++) for (let i = h.y >> 4; i <= e.y >> 4; i++) for (let t = h.x >> 5; t <= e.x >> 5; t++) if (x0(t, i, s)) return !0;
+                    return !1;
+                })(q(t, this.s), D(t, this.s));
+            }
+        }
+        X(t) {}
+        G(t) {}
+        j() {
+            this.U += J0;
+            let t = this.U / this.T[0], i = t - (0 | t), s = this.T[1][(0 | t) % this.T[1].length], h = this.T[1][(1 + t | 0) % this.T[1].length];
+            h < s && ([ h, s ] = [ s, h ], i = 1 - i), _0(this.p, this.k, this.F, this.V, this.K.f[s], this.K.f[h], i, this.K.nv);
+        }
+        Z(i, s = 1, h, e, a) {
+            for (let t = 0; t < i; t++) {
+                let t = dt(z0, this.p);
+                t.K = h, t.V = e, t._ = tt + a + Math.random() * a * .2, t.v = b((Math.random() - .5) * s, Math.random() * s, (Math.random() - .5) * s);
+            }
+        }
+        $(t, i) {
+            this.l || (this.h -= i, this.h <= 0 && this.L());
+        }
+        B(t) {
+            var i = w(k(U(this.p, h0), 64, 1200, 1, 0), 0, 1), s = -1 * Math.sin(E(this.p, h0) - a0);
+            e(t, i, 0, s);
+        }
+        L() {
+            this.l = 1;
+        }
+    }
+    class b0 extends k0 {
+        Y() {
+            this.s = b(12, 24, 12), this.f = 10, this.J = 3e3, this.m = 17, this.t0 = 0, this.i0 = 0, 
+            this.h = 100, this.N = 2, this.s0 = [ new Z0() ], this.h0 = 0, this.k += nt * Math.PI, 
+            this.e0 = 0, rt = this, at.push(this);
+        }
+        I() {
+            this.F = w(this.F + M * m.value * (mi.checked ? -15e-5 : 15e-5), -1.5, 1.5), this.k = (this.k + v * m.value * 15e-5) % (2 * Math.PI), 
+            this.a = C(F(b(l[4] - l[2], 0, l[1] - l[3]), this.k), this.J * (this.q ? 1 : .3)), 
+            l[9] && this.q && this.t0 && (this.v.y = 400, this.q = 0, this.t0 = 0), l[9] || (this.t0 = 1), 
+            this.h0 = (this.h0 + l[d] + this.s0.length - l[o]) % this.s0.length;
+            let t = this.i0 - tt, i = this.s0[this.h0];
+            l[7] && t < 0 && (this.i0 = tt + i.a0, i.r0 && 0 == i.n0 ? e(Ht) : (i.l0(this.p, this.k, this.F), 
+            dt(F0, this.p, 10, 255)._ = tt + .1)), this.e0 += 1e-4 * z(this.a), this.f = this.q ? 10 : 2.5, 
+            this.H(), h0.x = this.p.x, h0.z = this.p.z, h0.y = this.p.y + 8 - -160 * w(tt - this.O, 0, .1), 
+            a0 = this.k, e0 = this.F, _0(D(h0, A(b(0, .3 * Math.sin(this.e0) - 10, 12 + w(k(t, 0, i.a0, 5, 0), 0, 5)), this.k, this.F)), this.k + Math.PI / 2, this.F, i.V, i.K.f[0], i.K.f[0], 0, i.K.nv), 
+            h.textContent = 0 | this.h, a.textContent = i.r0 ? i.n0 : "∞";
+        }
+        $(t, i) {
+            e(Lt), super.$(t, i);
+        }
+        L() {
+            super.L(), h.textContent = 0 | this.h, pt("YOU DIED"), setTimeout(() => ot(nt), 2e3);
+        }
+    }
+    class A0 extends k0 {
+        Y(t, i) {
+            this.K = St, this.V = t, this.h = 10, this.s = b(64, 64, 64), this.o0 = T(this.p), 
+            this.c0 = 0, this.k = i * Math.PI / 2, this.d0 = 0, this._0 = 1 == nt, et.push(this), 
+            at.push(this);
+        }
+        I() {
+            if (this.j(), U(this.p, rt.p) < 128) {
+                if (this._0) return void _t("YOU NEED THE KEY...");
+                this.c0 = tt + 3;
+            }
+            this.c0 < tt ? this.d0 = Math.max(0, this.d0 - J0) : this.d0 = Math.min(1, this.d0 + J0), 
+            this.p = D(this.o0, F(b(96 * this.d0, 0, 0), this.k));
+        }
+        $() {}
+    }
+    class F0 extends k0 {
+        Y(t, i) {
+            this.p0 = t, this.f0 = tt, 1 == t && (this.u0 = !0), i || console.log("no color!"), 
+            this.v0 = [ (7 & i) << 5, (28 & i) << 3, 192 & i ];
+        }
+        I() {
+            this.u0 && .9 < Math.random() && (this.p0 = .5 < Math.random() ? 10 : 0);
+            let t = this.p0;
+            this._ && (this._ < tt && this.L(), t = k(tt, this.f0, this._, 1, 0) * this.p0), 
+            v0(this.p, t, this.v0[0], this.v0[1], this.v0[2]);
+        }
+    }
+    class E0 extends k0 {
+        Y() {
+            this.V = 30, this.K = Et, this.T = [ .05, [ 0, 1, 2, 1, 2, 0, 0, 1, 2 ] ], this.p.x -= 16, 
+            this.p.z -= 16, this.m0 = this.p;
+            for (var t of [ b(-32, 0, 0), b(32, 0, 0), b(0, 0, -32), b(0, 0, 32) ]) {
+                D(this.p, t);
+                if (y0(this.p, D(this.p, t))) {
+                    this.p = D(this.p, C(t, .4)), this.m0 = q(this.p, C(t, 2));
+                    break;
+                }
+            }
+            this.p0 = 0;
+        }
+        I() {
+            super.I(), .8 < Math.random() && (this.p0 = Math.random()), v0(this.m0, Math.sin(tt) + this.p0 + 6, 255, 192, 16);
+        }
+    }
+    class T0 extends k0 {
+        Y() {
+            this.K = Ft, this.V = 21, this.F = Math.PI / 2, this.h = 10, this.s = b(8, 32, 8), 
+            et.push(this);
+        }
+        L() {
+            for (var t of et) {
+                var i = U(this.p, t.p);
+                t !== this && i < 256 && t.$(this, k(i, 0, 256, 60, 0));
+            }
+            super.L(), this.B(Zt);
+            for (var s of xt) this.Z(2, 600, s, 21, 1);
+            dt(F0, D(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2, et = et.filter(t => t != this);
+        }
+    }
+    class z0 extends k0 {
+        Y() {
+            this.M = .5, this.f = .1;
+        }
+        I() {
+            this.k += .001 * this.v.y, this.F += .001 * this.v.x, this.H(), this.j();
+        }
+    }
+    class U0 extends k0 {
+        Y() {
+            this.V = 8, this.K = Yt, this._ = tt + 2, this.M = .5, this.M0 = 120;
+        }
+        I() {
+            super.H(), this.j(), v0(D(this.p, b(0, 16, 0)), .5 * (Math.sin(10 * tt) + 2), 255, 32, 0), 
+            this.f = this.q ? 5 : .5;
+        }
+        X(t) {
+            (1 != t || this.v.y < -128) && (this.k += Math.random(), this.B(Wt));
+        }
+        G(t) {
+            this.L();
+        }
+        L() {
+            for (var t of this.R) {
+                var i = U(this.p, t.p);
+                i < 196 && t.$(this, k(i, 0, 196, this.M0, 0));
+            }
+            super.L(), this.B(Zt), this.Z(20, 800, mt, 8, 1), dt(F0, D(this.p, b(0, 16, 0)), 250, 143)._ = tt + .2;
+        }
+    }
+    class D0 extends k0 {
+        Y() {
+            this.V = 2, this.K = model_nail, this.g = 0, this._ = tt + 3;
+        }
+        I() {
+            this.H(), this.j();
+        }
+        X(t) {
+            this.L(), this.B(Qt), this.Z(2, 80, mt, 8, .4), dt(F0, this.p, 1, 255)._ = tt + .1;
+        }
+        G(t) {
+            this.L(), t.$(this, 9);
+        }
+    }
+    class q0 extends k0 {
+        Y() {
+            this.V = 21, this.K = model_nail, this.g = 0, this._ = tt + 3;
+        }
+        I() {
+            this.H(), this.j(), v0(this.p, 5, 255, 128, 0);
+        }
+        X(t) {
+            this.L(), this.B(Qt), this.Z(2, 80, mt, 8, .4), dt(F0, D(this.p, b(0, 10, 0)), 5, 245)._ = tt + .1;
+        }
+        G(t) {
+            this.L(), t.$(this, 15);
+        }
+    }
+    class C0 extends k0 {
+        Y() {
+            this.V = 18, this.M = 0, this._ = tt + 2, this.K = gt, this.k = Math.random(), this.F = Math.random();
+        }
+        I() {
+            super.H(), this.j(), this.f = this.q ? 15 : 0;
+        }
+        X(t) {
+            1 == t && this.v.y < -128 && this.B(It);
+        }
+        G(t) {
+            t.$(this, 10), this.L();
+        }
+    }
+    class N0 extends k0 {
+        Y() {
+            this.g = 0, this._ = tt + .1;
+        }
+        I() {
+            this.H();
+        }
+        X(t) {
+            this.L(), this.Z(2, 80, mt, 4, .4), dt(F0, this.p, .5, 255)._ = tt + .1;
+        }
+        G(t) {
+            this.L(), t.$(this, 4);
+        }
+    }
+    class O0 extends k0 {
+        Y(t) {
+            this.g0 = [ [ 1, [ 0 ] ], [ .4, [ 1, 2, 3, 4 ] ], [ .2, [ 1, 2, 3, 4 ] ], [ .25, [ 0, 5, 5, 5 ] ], [ .25, [ 5, 0, 0, 0 ] ] ], 
+            this.x0 = [ 0, 0, .1 ], this.y0 = [ 1, .5, .5 ], this.w0 = [ 2, 1, .3 ], this.k0 = [ 0, 0, .1, this.w0 ], 
+            this.b0 = [ 4, 0, .4, this.k0 ], this.A0 = [ 3, 0, .4, this.b0 ], this.F0 = [ 0, 0, .1, this.A0 ], 
+            this.E0 = [ 2, 1, .8, this.F0 ], this.s = b(12, 28, 12), this.m = 17, this.J = 196, 
+            this.T0 = this.k, this.z0 = 0, this.U0 = 800, this.D0 = 96, this.q0 = .65, this.C = 1, 
+            this.C0 = 1, this.N = 1, et.push(this), t ? (this.N0(this.y0), this.T0 = Math.PI / 2 * t, 
+            this.U = Math.random()) : this.N0(this.x0);
+        }
+        N0(t) {
+            this.O0 = t, this.T = this.g0[t[0]], this.U = 0, this.z0 = tt + t[2] + t[2] / 4 * Math.random();
+        }
+        I() {
+            var t, i;
+            this.z0 < tt && (this.C0 = .5 < Math.random() ? .5 : -.5, t = U(this.p, rt.p), i = E(this.p, rt.p), 
+            this.O0[3] && this.N0(this.O0[3]), this.O0 == this.w0 && (y0(this.p, rt.p) || (this.T0 = i), 
+            t < this.U0 && (t < this.D0 || Math.random() > this.q0 ? (this.N0(this.E0), this.T0 += Math.PI / 2 + Math.random() * Math.PI) : this.N0(this.F0))), 
+            this.O0 == this.k0 && (this.T0 = i), this.O0 != this.y0 && this.O0 != this.x0 || t < 700 && !y0(this.p, rt.p) && this.N0(this.F0), 
+            this.O0 == this.F0 && (this.T0 = i, y0(this.p, rt.p) && this.N0(this.E0)), this.O0 == this.b0 && this.S0()), 
+            this.k += .1 * (i = this.T0 - this.k, Math.atan2(Math.sin(i), Math.cos(i))), this.q && (this.v = F(b(0, this.v.y, this.O0[1] * this.J), this.T0)), 
+            this.H(), this.j();
+        }
+        Y0(t, i, s, h) {
+            let e = dt(t, this.p);
+            return e.N = 1, e.k = this.k + Math.PI / 2, e.v = A(b(0, 0, i), this.k + s, Math.atan2(this.p.y - rt.p.y, U(this.p, rt.p)) + h), 
+            e;
+        }
+        $(t, i) {
+            super.$(t, i), this.B(It), this.O0 != this.x0 && this.O0 != this.y0 || (this.T0 = E(this.p, rt.p), 
+            this.N0(this.w0)), this.Z(2, 200, Mt, 18, .5);
+        }
+        L() {
+            super.L();
+            for (var t of xt) this.Z(2, 300, t, 18, 1);
+            this.B(Kt), et = et.filter(t => t != this);
+        }
+        X(t) {
+            1 != t && (this.O0 == this.y0 ? this.T0 += Math.PI : this.T0 += this.C0);
+        }
+    }
+    class S0 extends O0 {
+        Y(t) {
+            super.Y(t), this.K = yt, this.V = 17, this.h = 40;
+        }
+        S0() {
+            this.B(Pt), dt(F0, D(this.p, b(0, 30, 0)), 10, 255)._ = tt + .1;
+            for (let t = 0; t < 3; t++) this.Y0(N0, 1e4, .08 * Math.random() - .04, .08 * Math.random() - .04);
+        }
+    }
+    class Y0 extends O0 {
+        Y(t) {
+            super.Y(t), this.K = wt, this.V = 19, this.h = 80, this.s = b(14, 44, 14);
+        }
+        S0() {
+            this.B(Rt), this.Y0(q0, 800, 0, 0);
+        }
+    }
+    class I0 extends O0 {
+        Y(t) {
+            super.Y(t), this.K = kt, this.V = 20, this.J = 96, this.h = 200, this.s = b(14, 36, 14), 
+            this.U0 = 350, this.g0 = [ [ 1, [ 0 ] ], [ .8, [ 1, 2, 3, 4 ] ], [ .4, [ 1, 2, 3, 4 ] ], [ .35, [ 0, 5, 5, 5 ] ], [ .35, [ 5, 0, 0, 0 ] ] ];
+        }
+        S0() {
+            this.B(Vt), this.Y0(U0, 600, 0, -.4).M0 = 40;
+        }
+    }
+    class K0 extends O0 {
+        Y(t) {
+            super.Y(t), this.K = bt, this.V = 18, this.J = 0, this.U0 = 350, this.h = 60, this.g0[3] = [ .25, [ 0, 0, 5, 5 ] ], 
+            this.w0 = [ 0, 0, .1 ], this.k0 = [ 0, 0, 1.1, this.x0 ], this.b0 = [ 4, 0, .4, this.k0 ], 
+            this.A0 = [ 3, 0, .4, this.b0 ], this.F0 = [ 0, 0, .1, this.A0 ], this.E0 = [ 0, 0, .1, this.F0 ], 
+            this.N0(this.x0);
+        }
+        $(t, i) {
+            60 < i && super.$(t, i);
+        }
+        S0() {
+            this.B(It), this.Y0(C0, 600, 0, -.5);
+        }
+    }
+    class j0 extends O0 {
+        Y(t) {
+            super.Y(t), this.K = At, this.V = 22, this.h = 25, this.N = 1, this.s = b(12, 16, 12), 
+            this.U0 = 200, this.D0 = 64, this.q0 = .7, this.J = 256, this.g0 = [ [ 1, [ 0 ] ], [ .15, [ 0, 1 ] ], [ .15, [ 0, 1 ] ], [ 1, [ 0 ] ], [ .1, [ 0, 1, 1, 1, 0, 0, 0 ] ] ], 
+            this.y0 = [ 1, .2, .5 ], this.k0 = [ 0, 0, .5, this.w0 ], this.b0 = [ 4, 0, 1, this.k0 ], 
+            this.A0 = [ 3, 0, 0, this.b0 ], this.F0 = [ 0, 0, 0, this.A0 ], this.E0 = [ 2, 1, .3, this.F0 ], 
+            this.N0(this.x0);
+        }
+        G(t) {
+            this.I0 || this.O0 != this.b0 || (this.I0 = 1, t.$(this, 14));
+        }
+        S0() {
+            this.B(jt), this.v = F(b(0, 250, 600), this.T0), this.q = 0, this.I0 = 0, this.C = 0, 
+            clearTimeout(this.K0), this.K0 = setTimeout(() => this.C = 1, 1e3);
+        }
+    }
+    class H0 extends k0 {
+        Y() {
+            this.K = Ct, this.s = b(12, 12, 12), this.k += Math.PI / 2;
+        }
+        I() {
+            this.q || this.H(), this.j(), U(this.p, rt.p) < 40 && this.j0();
+        }
+    }
+    class L0 extends H0 {
+        Y() {
+            super.Y(), this.V = 21, this.K = Ot;
+        }
+        I() {
+            this.k += .02, super.I();
+        }
+        j0() {
+            e(sfx_pickup), _t("YOU GOT THE KEY!");
+            for (var t of ht) if (t._0) {
+                t._0 = 0;
+                break;
+            }
+            this.L();
+        }
+    }
+    class R0 extends H0 {
+        Y() {
+            super.Y(), this.V = 12, this.K = Dt;
+        }
+        I() {
+            this.k += .02, super.I();
+        }
+        j0() {
+            e(sfx_pickup), rt.h0 = rt.s0.push(new $0()) - 1, this.L();
+        }
+    }
+    class P0 extends H0 {
+        Y() {
+            super.Y(), this.V = 21, this.K = qt;
+        }
+        I() {
+            this.k += .02, super.I();
+        }
+        j0() {
+            e(sfx_pickup), rt.h0 = rt.s0.push(new B0()) - 1, this.L();
+        }
+    }
+    class X0 extends H0 {
+        Y() {
+            super.Y(), this.V = 23;
+        }
+        j0() {
+            e(sfx_pickup), rt.h += 25, this.L();
+        }
+    }
+    class G0 extends H0 {
+        Y() {
+            super.Y(), this.V = 24;
+        }
+        j0() {
+            for (var t of rt.s0) t instanceof $0 && (t.n0 += 50, e(sfx_pickup), this.L());
+        }
+    }
+    class Q0 extends H0 {
+        Y() {
+            super.Y(), this.V = 25, this.K = Nt;
+        }
+        j0() {
+            for (var t of rt.s0) t instanceof B0 && (t.n0 += 10, e(sfx_pickup), this.L());
+        }
+    }
+    class V0 extends k0 {
+        I() {
+            !this.l && U(this.p, rt.p) < 64 && (ct(), this.l = 1);
+        }
+    }
+    class W0 {
+        constructor() {
+            this.r0 = 1, this.H0 = b(0, 0, 8), this.Y();
+        }
+        l0(t, i, s) {
+            this.r0 && this.n0--, e(this.L0), this.Y0(t, i, s);
+        }
+        Y0(t, i, s) {
+            let h = dt(this.R0, D(t, D(b(0, 12, 0), A(this.H0, i, s))));
+            h.v = A(b(0, 0, this.P0), i, s), h.k = i - Math.PI / 2, h.F = -s, h.N = 2, this.H0.x *= -1;
+        }
+    }
+    class Z0 extends W0 {
+        Y() {
+            this.V = 7, this.K = Tt, this.L0 = Pt, this.r0 = 0, this.a0 = .9, this.R0 = N0, 
+            this.P0 = 1e4;
+        }
+        Y0(i, s, h) {
+            setTimeout(() => e(Xt), 200), setTimeout(() => e(Xt), 350);
+            for (let t = 0; t < 8; t++) super.Y0(i, s + .08 * Math.random() - .04, h + .08 * Math.random() - .04);
+        }
+    }
+    class $0 extends W0 {
+        Y() {
+            this.V = 4, this.K = zt, this.L0 = Gt, this.n0 = 100, this.a0 = .09, this.R0 = D0, 
+            this.P0 = 1300, this.H0 = b(6, 0, 8);
+        }
+    }
+    class B0 extends W0 {
+        Y() {
+            this.V = 21, this.K = Ut, this.L0 = Vt, this.n0 = 10, this.a0 = .65, this.R0 = U0, 
+            this.P0 = 900;
+        }
+    }
+    let J0 = 0, tt = .016, it, st = 0, ht, et, at, rt, nt, lt, ot = t => {
+        ts.style.display = "none", ht = [], et = [], at = [], nt = t, (i => {
+            M0 = i;
+            var s = [ b0, S0, Y0, I0, K0, j0, R0, P0, X0, G0, Q0, T0, F0, V0, A0, L0, E0 ];
+            for (let t = 0; t < M0.e.length; ) {
+                var h = s[i.e[t++]];
+                dt(h, b(32 * i.e[t++], 16 * i.e[t++], 32 * i.e[t++]), i.e[t++], i.e[t++]);
+            }
+        })(ut[nt]);
+    }, ct = () => {
+        lt = 1;
+    }, dt = (t, i, s, h) => {
+        h = new t(i, s, h);
+        return ht.push(h), h;
+    }, _t = t => {
+        msg.textContent = t, msg.style.display = "block", clearTimeout(st), st = setTimeout(() => msg.style.display = "none", 2e3);
+    }, pt = (t, i = "") => {
+        ts.innerHTML = "<h1>" + t + "</h1>" + i, ts.style.display = "block";
+    }, ft = t => {
+        requestAnimationFrame(ft), t *= .001, J0 = Math.min(t - (it || t), .05), it = t, 
+        tt += J0, c0(.1, .2, .5);
+        let i = [];
+        for (var s of ht) s.l || (s.I(), i.push(s));
+        ht = i, w0(), d0(), v = M = 0, l[d] = l[o] = 0, lt && (lt = 0, nt++, 2 == nt ? (pt("THE END", "THANKS FOR PLAYING ❤"), 
+        h.textContent = a.textContent = "", rt.l = 1, h0 = b(1856, 784, 2272), a0 = 0, e0 = .5) : ot(nt));
+    }, ut, vt, mt, Mt, gt, xt = [], yt, wt, kt, bt, At, Ft, Et, Tt, zt, Ut, Dt, qt, Ct, Nt, Ot, St, Yt, It, Kt, jt, Ht, Lt, Rt, Pt, Xt, Gt, Qt, Vt, Wt, Zt, $t = t => {
+        c0(), _0(b(0, 0, 0), 0, 0, 1, model_q.f[0], model_q.f[0], 0, model_q.nv), v0(b(200 * Math.sin(33e-5 * t), 100, -100), 10, 255, 192, 32), 
+        v0(F(b(0, 0, 100), 63e-5 * t), 10, 32, 64, 255), v0(F(b(100, 0, 0), 53e-5 * t), 10, 196, 128, 255), 
+        d0(), requestAnimationFrame($t);
+    };
+    (async () => {
+        (() => {
+            for (var t in Y) null != Y[t].length && (Y[t.match(/(^..|[A-Z]|\d.|v$)/g).join("")] = Y[t]);
+            var i = Y.crP();
+            Y.atS(i, n0(35633, I)), Y.atS(i, n0(35632, K)), Y.liP(i), Y.usP(i), P = Y.geUL(i, "c"), 
+            X = Y.geUL(i, "l"), G = Y.geUL(i, "m"), Q = Y.geUL(i, "mp"), B = Y.geUL(i, "mr"), 
+            J = Y.geUL(i, "f"), Y.biB(34962, Y.crB()), l0(i, "p", 3, 8, 0), l0(i, "t", 2, 8, 3), 
+            l0(i, "n", 3, 8, 5), t0 = l0(i, "p2", 3, 8, 0), i0 = l0(i, "n2", 3, 8, 5), Y.en(2929), 
+            Y.en(3042), Y.en(2884), Y.vi(0, 0, c.width, c.height);
+        })(), y(t).map(o0), ut = await (async t => {
+            let r = new Uint8Array(await (await fetch(t)).arrayBuffer()), n = [];
+            for (let a = 0; a < r.length; ) {
+                let t = r[a++] | r[a++] << 8, h = new Uint8Array(g0 * g0 * g0 >> 3), i = (new Uint8Array(g0 * g0 * g0 >> 3), 
+                r.subarray(a, a += t)), s = [], e;
+                for (let t = 0; t < i.length; ) {
+                    255 == i[t] && (t++, e = i[t++]);
+                    var l = i[t++], o = i[t++], c = i[t++], d = i[t++], _ = i[t++], p = i[t++];
+                    s.push({
+                        t: e,
+                        b: u0(l << 5, o << 4, c << 5, d << 5, _ << 4, p << 5, e)
+                    });
+                    for (let s = c; s < c + p; s++) for (let i = o; i < o + _; i++) for (let t = l; t < l + d; t++) h[s * g0 * g0 + i * g0 + t >> 3] |= 1 << (7 & t);
+                }
+                var f = r[a++] | r[a++] << 8, f = r.subarray(a, a += 6 * f);
+                n.push({
+                    cm: h,
+                    e: f,
+                    r: s
+                });
+            }
+            return n;
+        })("l"), vt = await (async t => {
+            let i = new Uint8Array(await (await fetch(t)).arrayBuffer()), s = [];
+            for (let t = 0; t < i.length; ) {
+                var h = 3 * (i[t++] * i[t++] + i[t++]);
+                s.push(i.subarray(t - 3, t += h));
+            }
+            return s;
+        })("m"), model_q = m0(vt[3]), mt = m0(vt[0], .1, .1, .1), Mt = m0(vt[0], .1, .2, .1), 
+        gt = m0(vt[0], .3, .6, .3), yt = m0(vt[1], 2.5, 2.2, 2.5), wt = m0(vt[1], 3, 2.7, 3), 
+        bt = m0(vt[1], 1.5, 2, 1.5), kt = m0(vt[1], 4, 3, 4), At = m0(vt[4], 2.5, 2.5, 2.5), 
+        Ft = m0(vt[2], 2, 2, 2), Et = m0(vt[7], .6, 1, .6), Dt = m0(vt[6], 1, 1, 1), qt = m0(vt[2], 1, .5, .5), 
+        Ct = m0(vt[5], .7, .7, .7), Nt = m0(vt[5], .5, 1, .5), Ot = m0(vt[5], .1, .7, .1), 
+        St = m0(vt[5], 5, 5, .5), Tt = m0(vt[2], 1, .2, .2), Ut = m0(vt[2], .7, .4, .4), 
+        zt = m0(vt[6], .7, .7, .7), Yt = m0(vt[2], .3, .3, .3), model_nail = m0(vt[2], .5, .1, .1);
+        for (let i = 0; i < 204; i += 34) {
+            let t = m0(vt[1], 2, 1, 2);
+            t.f[0] += i, t.nv = 34, xt.push(t);
+        }
+        Y.buD(34962, j.subarray(0, 8 * H), 35044), requestAnimationFrame($t), f.onclick = () => g.requestFullscreen(), 
+        g.onclick = () => {
+            g.onclick = () => c.requestPointerLock(), g.onclick(), (() => {
+                n = new AudioContext(), n.resume();
+                for (let t = 0; t < W; t++) $[t] = Math.sin(6.283184 * t / W), $[t + W] = $[t] < 0 ? -1 : 1, 
+                $[t + 2 * W] = t / W - .5, $[t + 3 * W] = t < W / 2 ? t / (W / 4) - 1 : 3 - t / (W / 4);
+            })(), It = s(135, [ 8, 0, 0, 1, 148, 1, 3, 5, 0, 0, 139, 1, 0, 2653, 0, 2193, 255, 2, 639, 119, 2, 23, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Kt = s(140, [ 7, 0, 0, 1, 148, 1, 7, 5, 0, 1, 139, 1, 0, 4611, 789, 15986, 195, 2, 849, 119, 3, 60, 0, 0, 0, 1, 10, 176, 1 ]), 
+            jt = s(132, [ 8, 0, 0, 1, 192, 1, 8, 0, 0, 1, 120, 1, 0, 5614, 0, 20400, 192, 1, 329, 252, 1, 55, 0, 0, 1, 1, 8, 192, 3 ]), 
+            Ht = s(120, [ 8, 0, 0, 0, 96, 1, 8, 0, 0, 0, 0, 0, 255, 0, 0, 1075, 232, 1, 2132, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Lt = s(135, [ 7, 3, 140, 1, 232, 3, 8, 0, 9, 1, 139, 3, 0, 4611, 1403, 34215, 256, 4, 1316, 255, 0, 0, 0, 1, 0, 1, 7, 255, 0 ]), 
+            sfx_pickup = s(140, [ 7, 0, 0, 1, 187, 3, 8, 0, 0, 1, 204, 3, 0, 4298, 927, 1403, 255, 0, 0, 0, 3, 35, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Rt = s(135, [ 8, 0, 0, 1, 147, 1, 6, 0, 0, 1, 159, 1, 0, 197, 1234, 21759, 232, 2, 2902, 255, 2, 53, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Pt = s(135, [ 7, 3, 0, 1, 255, 1, 6, 0, 0, 1, 255, 1, 112, 548, 1979, 11601, 255, 2, 2902, 176, 2, 77, 0, 0, 1, 0, 10, 255, 1 ]), 
+            Xt = s(125, [ 9, 0, 0, 1, 131, 1, 0, 0, 0, 0, 0, 3, 255, 137, 22, 1776, 255, 2, 4498, 176, 2, 36, 2, 84, 0, 0, 3, 96, 0 ]), 
+            Gt = s(130, [ 7, 0, 0, 1, 132, 1, 8, 4, 0, 1, 132, 2, 162, 0, 0, 8339, 232, 2, 2844, 195, 2, 40, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Qt = s(135, [ 8, 0, 0, 1, 148, 1, 0, 0, 0, 0, 0, 1, 255, 0, 0, 2193, 128, 2, 6982, 119, 2, 23, 0, 0, 0, 0, 0, 0, 0 ]), 
+            Vt = s(127, [ 8, 0, 0, 1, 171, 1, 9, 3, 0, 1, 84, 3, 96, 2653, 0, 13163, 159, 2, 3206, 255, 2, 64, 0, 0, 0, 1, 9, 226, 0 ]), 
+            Wt = s(168, [ 7, 0, 124, 0, 128, 0, 8, 5, 127, 0, 128, 0, 125, 88, 0, 2193, 125, 1, 1238, 240, 1, 91, 3, 47, 0, 0, 0, 0, 0 ]), 
+            Zt = s(135, [ 8, 0, 0, 1, 195, 1, 6, 0, 0, 1, 127, 1, 255, 197, 1234, 21759, 232, 2, 1052, 255, 4, 73, 3, 25, 1, 0, 10, 227, 1 ]), 
+            e(((a, r, t, i) => {
+                let n = V * t, l = new Float32Array(n), o = new Float32Array(n);
+                for (var c of i) {
+                    let s = new Float32Array(n), h = new Float32Array(n), e = 0, t = c[0][20] * a >> 1, i = c[0][21] / 255;
+                    for (let i = 0; i < r; i++) for (let t = 0; t < 32; t++) {
+                        var d = c[2][c[1][i] - 1]?.[t];
+                        d && p(a, d, s, h, e, ...c[0]), e += a;
+                    }
+                    u(t, i, s, h);
+                    for (let t = 0; t < n; t++) l[t] += s[t], o[t] += h[t];
+                }
+                return _(l, o);
+            })(...i), 1, 1), ot(0), $t = ft;
+        };
+    })();
+}, gs();
